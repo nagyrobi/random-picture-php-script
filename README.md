@@ -1,2 +1,2 @@
 # random-picture-php-script
-A quick PHP script to throw a random picture from a folder on the server
+A quick & dirty PHP script to mimic very basic unsplash.it functionality with your own folder with pictures. It's based on [this](https://www.dyn-web.com/code/random-image-php/), but adapted to serve a native picture file + the ability to avoid throwing the same picture again for the next 60 pictures.
