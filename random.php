@@ -8,21 +8,20 @@ $root = '/var/www/html/utils/random_img/';
 // this many pictures to remember no to show soon
 $noRepeatLast = 30;
 
-
 $clientip = getUserIpAddr();
 
 switch ($clientip) {
     case "192.168.1.11":
-        $path = $root . 'images-1/'; 			// the directory containing the JPG files
-    	$prev = '/tmp/piclog-display-1.txt';	// a temporary logfile to remember the last pictures thrown
+        $path = $root . 'images-1/'; 		// the directory containing the JPG files
+    	$prev = '/tmp/piclog-' . $clientip;	// a temporary logfile to remember the last pictures thrown
         break;
     case "192.168.1.12":
         $path = $root . 'images-2/';
-	    $prev = '/tmp/piclog-display-2.txt';
+	$prev = '/tmp/piclog-' . $clientip;
         break;
     case "192.168.1.13":
         $path = $root . 'images/';
-        $prev = '/tmp/piclog-display-3.txt';
+        $prev = '/tmp/piclog-' . $clientip;
         break;
     default:
         $path = $root . 'images/';
